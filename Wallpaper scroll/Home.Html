@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>                  
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+
+    <div class="Container">
+        <div class="Slide">
+            <div class="item" style="background-image:url(Photos/wp1889496-ultra-music-festival-wallpapers.jpg);">
+                <div class="Content">
+                    <div class="Name">Ultra Music Festival 2018</div>
+                    <div class="des">The world's premier electronic music festival, boasting elite DJs and unparalleled production located in the beautiful city of Miami.</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(Photos/thibault-penin-AWOl7qqsffM-unsplash.jpg);">
+                <div class="Content">
+                    <div class="Name">Netflix</div>
+                    <div class="des">TV shows and movies on an internet-connected device.</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(Photos/Untitled.png);">
+                <div class="Content">
+                    <div class="Name">Dot Net Developer</div>
+                    <div class="des">NET Developer is a professional who builds software applications using languages and technologies of the . NET framework. </div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(Photos/wallhaven-0w3mqp.png);">
+                <div class="Content">
+                    <div class="Name">
+                        Iron Man
+                    </div>
+                    <div class="des">The Arc Reactor was a device initially designed by Howard Stark</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(Photos/wallhaven-kx939d.png);">
+                <div class="Content">
+                    <div class="Name">Nature</div>
+                    <div class="des">Nature is an inherent character or constitution, particularly of the ecosphere or the universe as a whole.</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image:url(Photos/thibault-penin-AWOl7qqsffM-unsplash.jpg);">
+                <div class="Content">
+                    <div class="Name">Netflix</div>
+                    <div class="des">Netflix is one of the world's leading entertainment services with over 260 million paid memberships in over 190 countries</div>
+                    <button>See more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button1">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    
+    <script>
+        let next = document.querySelector('.next')
+        let prev = document.querySelector('.prev')
+
+        next.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.Slide').appendChild(items[0])
+        })
+
+        prev.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item')
+            document.querySelector('.Slide').prepend(items[items.length-1])
+        })
+    </script>
+  
+</body>
+
+</html>
